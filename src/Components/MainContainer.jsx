@@ -1,6 +1,29 @@
-import React from 'react'
+import React from 'react';
 
-const HighlightCard = (props) => {
+const MainComponents = props => {
+    return(
+    <main>
+        <div className="titles">
+            <h2>Overview - Today</h2>
+        </div>
+        <div className="main-cards">
+            {props.data.detail.map( (item,index) =>{
+                return(                    
+                    <HighlightCard
+                        key= {`${item.socialNetwork}-${index}`}
+                        title= {item.title}
+                        number= {item.number}
+                        socialNetwork= {item.socialNetwork}
+                        today= {item.today}
+                    />
+                )
+            })}
+        </div>
+    </main>
+    )
+}
+
+const HighlightCard = props => {
 
     const socialNetworkIcon = `../../images/icon-${props.socialNetwork}.svg`
     const arrow = props.delta >= 0? '../../images/icon-up.svg' : '../../images/icon-down.svg'
@@ -22,4 +45,4 @@ const HighlightCard = (props) => {
     )
 }
 
-export default HighlightCard
+export default MainComponents
