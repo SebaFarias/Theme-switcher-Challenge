@@ -8,7 +8,7 @@ body{
     font-weight: bold;
 }
 .header-container{
-    padding: 0 25px
+    padding: 0 clamp(0px,calc(13.1455vw - 24.296px),600px); 
 }
 .titles{
     margin: 36px 0 16px;
@@ -44,6 +44,11 @@ p{
     background: #AEB3CB;
     border-radius: 12px;
 }
+.header-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(235px,1fr));
+    column-gap: 30px;
+}
 .header-card{
     margin-bottom: 24px;
     background: #F0F2FA;
@@ -65,6 +70,14 @@ p{
 }
 .youtube{
     background: #C4032A;
+}
+.main-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(235px,1fr));
+    column-gap: 30px;
+}
+.title{
+    padding-bottom: 27px;
 }
 .sm-name{
     margin: 28px auto 18px;
@@ -112,14 +125,13 @@ p{
     color:  #DC414C;
 }
 main{
-    padding: 21px 25px;
+    padding: 22px clamp(0px,calc(13.1455vw - 24.296px),600px); 
 }
 h2{
-    font-size: 25px;
-    line-height: 30px;
-    letter-spacing: -0.015em;
+    font-size: 24px;
+    line-height: 29px;/* identical to box height */
+    letter-spacing: 0.005em;
     color: #63687E;
-
 }
 .highlight-card{
     height: 125px;
@@ -156,4 +168,24 @@ h2{
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+@media (min-width: 950px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .titles{
+        border: none;
+        margin-bottom: 25px;
+    }
+    #switch{
+        align-items: center;
+    }
+    p{
+        margin: auto 12px auto 0
+    }
+    .title{
+        padding-bottom: 24px;
+    }
 }
