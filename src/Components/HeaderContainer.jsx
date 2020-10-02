@@ -3,7 +3,7 @@ import Switcher from './Switcher';
 
 const HeaderContainer = props => {
     return(
-        <section>
+        <section className='header-container'>
             <header>
                 <div className="titles">
                     <h1>Social Media Dashboard</h1>
@@ -37,12 +37,12 @@ const HeaderCard = (props) => {
         <div className="header-card">
             <div className={`gradient-bar ${props.socialNetwork}`}></div>
             <div className="sm-name">
-                <img src= {socialNetworkIcon} alt={`${props.socialNetwork} icon`}/>
-                {props.name}
+                <img className="sm-logo" src= {socialNetworkIcon} alt={`${props.socialNetwork} icon`}/>
+                <div className='sm-nick'>{props.name}</div> 
             </div>
             <div className="sm-info">
-                <h1>{props.numbers}</h1>
-                {props.socialNetwork === 'youtube' ? 'SUBSCRIBERS' : 'FOLLOWERS'}
+                <h1 className= 'sm-number'>{props.numbers}</h1>
+                <div className='sm-users' >{props.socialNetwork === 'youtube' ? 'SUBSCRIBERS' : 'FOLLOWERS'}</div>
             </div>
             <div className={`today ${props.today >= 0? 'positive' : 'negative'}`}>
                 <img src= {arrow} alt={`${props.today >= 0? 'up' : 'down'} arrow`}/>

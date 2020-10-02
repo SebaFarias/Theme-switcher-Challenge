@@ -9,9 +9,14 @@ const Switcher = () => {
   });
 
     return(
-        <div id={`${mode}-switch`} onClick={ () => setMode( mode === "light"? "dark" : "light" )}>
-            <h6>{`${mode.substring(0,1).toUpperCase()}${mode.substring(1)} Mode`}</h6>
-            <div className={`${mode}-switch`}></div> 
+        <div id='switch'>
+            <p>{`${mode.substring(0,1).toUpperCase()}${mode.substring(1)} Mode`}</p>
+            <button 
+              role='switch' 
+              className={`switch ${mode}-switch`}
+              aria-checked={mode === "light"} 
+              onClick={ () => setMode( mode === "light"? "dark" : "light" )}
+            ></button> 
         </div>
     )
 }

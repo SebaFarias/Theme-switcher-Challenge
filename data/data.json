@@ -25,41 +25,41 @@
         "title": "Page Views",
         "number": "87",
         "socialNetwork": "facebook",
-        "today": "3"
+        "today": 3
     },{
         "title": "Likes",
         "number": "52",
         "socialNetwork": "facebook",
-        "today": "-2"
+        "today": -2
     },{
         "title": "Likes",
         "number": "5462",
         "socialNetwork": "instagram",
-        "today": "2257"
+        "today": 2257
     },{
         "title": "Profile Views",
         "number": "52k",
         "socialNetwork": "instagram",
-        "today": "1375"
+        "today": 1375
     },{
         "title": "Retweets",
         "number": "117",
         "socialNetwork": "twitter",
-        "today": "303"
+        "today": 303
     },{
         "title": "Likes",
         "number": "507",
         "socialNetwork": "twitter",
-        "today": "553"
+        "today": 553
     },{
         "title": "Likes",
         "number": "107",
         "socialNetwork": "youtube",
-        "today": "-19"
+        "today": -19
     },{
         "title": "Total Views",
         "number": "1407",
         "socialNetwork": "youtube",
-        "today": "-12"
+        "today": -12
     }]
 }
