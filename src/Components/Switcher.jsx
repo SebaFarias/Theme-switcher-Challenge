@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const Switcher = () => {
-  const [mode, setMode] = useState("light");
-
-  useEffect(() => {
-    document.body.classList.remove("dark","light")
-    document.body.classList.add(mode)
-  });
+const Switcher = ({ on, toggle }) => {
 
     return(
         <div id='switch'>
-            <p>{`${mode.substring(0,1).toUpperCase()}${mode.substring(1)} Mode`}</p>
+            <p>Dark Mode</p>
             <button 
-              role='switch' 
-              className={`switch ${mode}-switch`}
-              aria-checked={mode === "light"} 
-              onClick={ () => setMode( mode === "light"? "dark" : "light" )}
+              type= 'button'
+              role= 'switch' 
+              className={`switch ${on?'dark':'ligth'}-switch`}
+              aria-checked={on === true} 
+              onClick={toggle}
             ></button> 
         </div>
     )

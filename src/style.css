@@ -1,14 +1,70 @@
+/********************************* 
+*       Table of Contents
+*       1- General Config
+*       2- General Colors
+*       3- Header 
+*       4- Header Cards
+*       5- Main
+*       6- Main Cards
+*       7- Atribution Footer
+*       8- Media Query
+*********************************/
+/********************************
+*
+*       1- General Config
+*
+********************************/
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 200ms ease-in-out;
 }
 body{
     font-family: 'Inter' , 'Serif';
     font-weight: bold;
+    color: #63687E;
 }
+.background-pattern{
+    position: absolute;
+    height: calc(0.845vw + 230px);
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0 0 1rem 1rem;
+    background: #F5F7FF;
+}
+/********************************
+*
+*       2- General Colors
+*
+********************************/
+.facebook{
+    background: #198FF5;
+}
+.twitter{
+    background: #1CA0F2;
+}
+.instagram{
+    background: linear-gradient(90deg, #FDC468 0%, #DF4996 100%);
+}
+.youtube{
+    background: #C4032A;
+}
+.positive{
+    color: #1DB489;
+}
+.negative{
+    color:  #DC414C;
+}
+/********************************
+*
+*       3- Header
+*
+********************************/
 .header-container{
-    padding: 0 clamp(0px,calc(13.1455vw - 24.296px),600px); 
+    padding: 0 clamp( 0px, 13.1455vw - 24.296px, 20% ); 
 }
 .titles{
     margin: 36px 0 16px;
@@ -26,14 +82,12 @@ h3{
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.021em;
-    color: #63687E;
 }
 p{
     margin: 3px auto 40px 0;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: -0.003em;
-    color: #63687E;
 }
 #switch{
     display:flex
@@ -49,35 +103,21 @@ p{
     grid-template-columns: repeat(auto-fill,minmax(235px,1fr));
     column-gap: 30px;
 }
+/********************************
+*
+*       4- Header Cards
+*
+********************************/
 .header-card{
     margin-bottom: 24px;
     background: #F0F2FA;
     border-radius: 5px;
     padding-bottom: 24px;
+    cursor: pointer;
 }
-.gradient-bar{
+.top-bar{
     height: 4px;
     border-radius: 4px 4px 0px 0px;
-}
-.facebook{
-    background: #198FF5;
-}
-.twitter{
-    background: #1CA0F2;
-}
-.instagram{
-    background: linear-gradient(90deg, #FDC468 0%, #DF4996 100%);
-}
-.youtube{
-    background: #C4032A;
-}
-.main-cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(235px,1fr));
-    column-gap: 30px;
-}
-.title{
-    padding-bottom: 27px;
 }
 .sm-name{
     margin: 28px auto 18px;
@@ -90,7 +130,6 @@ p{
     margin: auto  auto auto 0;
     font-size: 12px;
     line-height: 15px;    /* identical to box height */
-    color: #63687E;
 }
 .sm-number{
     font-size: 56px;
@@ -105,7 +144,46 @@ p{
     line-height: 15px;/* identical to box height */
     text-align: center;
     letter-spacing: 0.425em;
-    color: #63687E;
+}
+/********************************
+*
+*       5- Main
+*
+********************************/
+main{
+    padding: 22px clamp( 0px, 13.1455vw - 24.296px, 20% ); 
+}
+.title{
+    padding-bottom: 27px;
+}
+h2{
+    font-size: 24px;
+    line-height: 29px;/* identical to box height */
+    letter-spacing: 0.005em;
+}
+.main-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(235px,1fr));
+    column-gap: 30px;
+}
+/********************************
+*
+*       6- Main Cards
+*
+********************************/
+.highlight-card{
+    height: 125px;
+    margin-bottom: 1rem;
+    padding: 25px 30px 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    background: #F0F2FA;
+    cursor: pointer;
+}
+.highlight-card:hover,
+.header-card:hover{
+    background: #E1E3F0;
 }
 .today{
     font-size: 12px;
@@ -118,33 +196,8 @@ p{
 .delta>img{
     margin-right: 4px;
 }
-.positive{
-    color: #1DB489;
-}
-.negative{
-    color:  #DC414C;
-}
-main{
-    padding: 22px clamp(0px,calc(13.1455vw - 24.296px),600px); 
-}
-h2{
-    font-size: 24px;
-    line-height: 29px;/* identical to box height */
-    letter-spacing: 0.005em;
-    color: #63687E;
-}
-.highlight-card{
-    height: 125px;
-    margin-bottom: 1rem;
-    padding: 25px 30px 20px;
-    border-radius: 5px;
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-    background: #F0F2FA;
-}
 .left-up{
     font-size: 14px;
-    color: #63687E;
 }
 .highlight-card>img{
     margin-left: auto;
@@ -162,6 +215,11 @@ h2{
     line-height: 17px;    /* identical to box height */
     letter-spacing: -0.12em;
 }
+/********************************
+*
+*       7- Atribution Footer
+*
+********************************/
 .attribution { 
     font-size: 11px; 
     text-align: center;
@@ -169,7 +227,12 @@ h2{
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
-@media (min-width: 950px){
+/********************************
+*
+*       8- Media Query
+*
+********************************/
+@media (min-width: 800px){
     header{
         display: flex;
         justify-content: space-between;

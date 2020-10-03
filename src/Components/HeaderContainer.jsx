@@ -1,15 +1,24 @@
+import { Math } from 'core-js';
 import React from 'react';
 import Switcher from './Switcher';
 
 const HeaderContainer = props => {
+
+    const totalNumber = props.data.general.reduce( (acc,item) => { 
+        return acc + item.numbers;
+    },0)
+
     return(
         <section className='header-container'>
             <header>
                 <div className="titles">
                     <h1>Social Media Dashboard</h1>
-                    <h3>Total Followers: 23,004</h3>
+                    <h3>Total Followers:{
+                        totalNumber.toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    }</h3>
                 </div>
-                <Switcher/>
+                <Switcher on={props.state} toggle= {props.toggler}/>
             </header>
             <div className="header-cards">
                 {props.data.general.map( (item,index) =>{
@@ -31,22 +40,26 @@ const HeaderContainer = props => {
 const HeaderCard = (props) => {
 
     const socialNetworkIcon = `../../images/icon-${props.socialNetwork}.svg`
-    const arrow = props.today >= 0? '../../images/icon-up.svg' : '../../images/icon-down.svg'
+    const arrowURL = props.today >= 0? '../../images/icon-up.svg' : '../../images/icon-down.svg'
+    const shorten = number => {
+        if(number > 999999) return `${Math.floor(number / 1000000)}m`
+        return number > 9999 ? `${Math.floor(number / 1000)}k`: number.toString()
+    }
 
     return(
         <div className="header-card">
-            <div className={`gradient-bar ${props.socialNetwork}`}></div>
+            <div className={['top-bar', props.socialNetwork].join(' ')}></div>
             <div className="sm-name">
                 <img className="sm-logo" src= {socialNetworkIcon} alt={`${props.socialNetwork} icon`}/>
                 <div className='sm-nick'>{props.name}</div> 
             </div>
             <div className="sm-info">
-                <h1 className= 'sm-number'>{props.numbers}</h1>
+                <h1 className= 'sm-number'>{shorten(props.numbers)}</h1>
                 <div className='sm-users' >{props.socialNetwork === 'youtube' ? 'SUBSCRIBERS' : 'FOLLOWERS'}</div>
             </div>
-            <div className={`today ${props.today >= 0? 'positive' : 'negative'}`}>
-                <img src= {arrow} alt={`${props.today >= 0? 'up' : 'down'} arrow`}/>
-                {props.today >= 0? props.today : Math.abs(props.today) } Today
+            <div className={['today', props.today >= 0? 'positive' : 'negative'].join(' ')}>
+                <img src= {arrowURL} alt={`${props.today >= 0? 'up' : 'down'} arrow`}/>
+                { `${Math.abs(props.today)} Today` }
             </div>
         </div>
     )

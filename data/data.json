@@ -2,63 +2,62 @@
     "general":[{
         "socialNetwork": "facebook",
         "name": "@nathanf",
-        "numbers": "1987",
-        "today": "12"
+        "numbers": 1987,
+        "today": 12
     },{
         "socialNetwork": "twitter",
         "name": "@nathanf",
-        "numbers": "1044",
-        "today": "99"
+        "numbers": 1044,
+        "today": 99
     },{
         "socialNetwork": "instagram",
         "name": "@realnathanf",
-        "numbers": "11k",
-        "today": "1099"
+        "numbers": 11743,
+        "today": 1099
     },{
         "socialNetwork": "youtube",
         "name": "Nathan F.",
-        "numbers": "8239",
-        "today": "-144"
-    }
-    ],
+        "numbers": 8239,
+        "today": -144
+    }],
     "detail":[{
         "title": "Page Views",
-        "number": "87",
+        "number": 87,
         "socialNetwork": "facebook",
         "today": 3
     },{
         "title": "Likes",
-        "number": "52",
+        "number": 52,
         "socialNetwork": "facebook",
         "today": -2
     },{
         "title": "Likes",
-        "number": "5462",
+        "number": 5462,
         "socialNetwork": "instagram",
         "today": 2257
     },{
         "title": "Profile Views",
-        "number": "52k",
+        "number": 52374,
         "socialNetwork": "instagram",
         "today": 1375
     },{
         "title": "Retweets",
-        "number": "117",
+        "number": 117,
         "socialNetwork": "twitter",
         "today": 303
     },{
         "title": "Likes",
-        "number": "507",
+        "number": 507,
         "socialNetwork": "twitter",
         "today": 553
     },{
         "title": "Likes",
-        "number": "107",
+        "number": 107,
         "socialNetwork": "youtube",
         "today": -19
     },{
         "title": "Total Views",
-        "number": "1407",
+        "number": 1407,
         "socialNetwork": "youtube",
         "today": -12
     }]
