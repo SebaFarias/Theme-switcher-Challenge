@@ -10,6 +10,7 @@ const Switcher = ({ on, toggle }) => {
             <label htmlFor='switch'>Dark Mode</label>
             <button 
               type= 'button'
+              name= 'theme switcher'
               role= 'switch'  
               id= 'switch'
               aria-checked={on === true} 
