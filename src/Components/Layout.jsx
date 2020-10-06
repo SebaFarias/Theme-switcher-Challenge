@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import data from '../../data/data.json'
 import HeaderContainer from './HeaderContainer';
 import MainContainer from './MainContainer';
-import Attribution from './Attribution';
+import Attribution from './Attribution.jsx';
 import themeContext from '../theme';
 
 const Layout = props => {
