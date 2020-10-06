@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import data from '../../data/data.json'
 import HeaderContainer from './HeaderContainer';
 import MainContainer from './MainContainer';
-import Attribution from './Attribution';
+import Footer from './Footer';
 import upArrow from '../../images/icon-up.svg';
 import downArrow from '../../images/icon-down.svg';
 import facebook from '../../images/icon-facebook.svg';
@@ -30,7 +30,7 @@ const Layout = props => {
             <div style={theme.patternBG} className="background-pattern"></div>
             <HeaderContainer data= {datasrc} img={imgs} state= {props.state} toggler={props.toggler}/>
             <MainContainer data= {datasrc} img={imgs}/>
-            <Attribution/>            
+            <Footer/>            
         </div>
     )
 }
