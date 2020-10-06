@@ -17,6 +17,8 @@ const MainComponents = props => {
                     number= {item.number}
                     socialNetwork= {item.socialNetwork}
                     today= {item.today}
+                    logo={props.img[item.socialNetwork]}
+                    arrow = {item.today >= 0? props.img.upArrow : props.img.downArrow}
                     />
                     )
                 })}
@@ -28,8 +30,6 @@ const MainComponents = props => {
 const HighlightCard = props => {
     
     const theme = useContext(themeContext)
-    const socialNetworkIcon = `../../images/icon-${props.socialNetwork}.svg`
-    const arrowURL = props.today >= 0? '../../images/icon-up.svg' : '../../images/icon-down.svg'
     const shorten = number => {
         if(number > 999999) return `${Math.floor(number / 1000000)}m`
         return number > 9999 ? `${Math.floor(number / 1000)}k`: number.toString()
@@ -38,10 +38,10 @@ const HighlightCard = props => {
     return(
         <div className={['highlight-card',`${theme.name}-card`].join(' ')}>
             <div className="left-up">{props.title}</div>
-            <img src= {socialNetworkIcon} alt={`${props.socialNetwork} icon`}/>
+            <img src= {props.logo} alt={`${props.socialNetwork} icon`}/>
             <div className="left-down" style={theme.textPrimary}>{shorten(props.number)}</div>
             <div className={['delta' , props.today >= 0? 'positive' : 'negative'].join(' ')}>
-                <img src= {arrowURL} alt={`${props.today >= 0? 'up' : 'down'} arrow`}/>
+                <img src= {props.arrow} alt={`${props.today >= 0? 'up' : 'down'} arrow`}/>
                 {`${Math.abs(props.today)}%`}
             </div>
         </div>

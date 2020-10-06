@@ -30,6 +30,8 @@ const HeaderContainer = props => {
                             name= {item.name}
                             numbers= {item.numbers}
                             today= {item.today}
+                            logo={props.img[item.socialNetwork]}
+                            arrow = {item.today >= 0? props.img.upArrow : props.img.downArrow}
                         />
                     )
                 })}
@@ -40,8 +42,8 @@ const HeaderContainer = props => {
 
 const HeaderCard = (props) => {
     const theme = useContext(themeContext)
-    const socialNetworkIcon = `../../images/icon-${props.socialNetwork}.svg`
-    const arrowURL = props.today >= 0? '../../images/icon-up.svg' : '../../images/icon-down.svg'
+    const socialNetworkIcon = props.logo
+    const arrow = props.arrow
     const shorten = number => {
         if(number > 999999) return `${Math.floor(number / 1000000)}m`
         return number > 9999 ? `${Math.floor(number / 1000)}k`: number.toString()
@@ -59,7 +61,7 @@ const HeaderCard = (props) => {
                 <div className='sm-users' >{props.socialNetwork === 'youtube' ? 'SUBSCRIBERS' : 'FOLLOWERS'}</div>
             </div>
             <div className={['today', props.today >= 0? 'positive' : 'negative'].join(' ')}>
-                <img src= {arrowURL} alt={`${props.today >= 0? 'up' : 'down'} arrow`}/>
+                <img src= {arrow} alt={`${props.today >= 0? 'up' : 'down'} arrow`}/>
                 { `${Math.abs(props.today)} Today` }
             </div>
         </div>
