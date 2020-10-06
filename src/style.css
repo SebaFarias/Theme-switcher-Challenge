@@ -64,7 +64,7 @@ body{
 *
 ********************************/
 .header-container{
-    padding: 0 clamp( 0px, 13.1455vw - 24.296px, 20% ); 
+    padding: 0 max( 0px, 13.1455vw - 24.296px); 
 }
 header{
     padding-bottom: 36px;
@@ -165,7 +165,7 @@ label{
 *
 ********************************/
 main{
-    padding: 22px clamp( 0px, 13.1455vw - 24.296px, 20% ); 
+    padding: 22px max( 0px, 13.1455vw - 24.296px); 
 }
 .title{
     padding-bottom: 27px;
