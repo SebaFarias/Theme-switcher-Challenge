@@ -1,16 +1,18 @@
-import React from 'react';
+import React, {useCallback, useContext} from 'react';
+import themeContext from '../theme';
 
 const Switcher = ({ on, toggle }) => {
 
+  const theme = useContext(themeContext)
+
     return(
-        <div id='switch'>
-            <p>Dark Mode</p>
+        <div className={['switch',`${theme.name}-switch`].join(' ')} onClick={toggle}> 
+            <label htmlFor='switch'>Dark Mode</label>
             <button 
               type= 'button'
-              role= 'switch' 
-              className={`switch ${on?'dark':'ligth'}-switch`}
+              role= 'switch'  
+              id= 'switch'
               aria-checked={on === true} 
-              onClick={toggle}
             ></button> 
         </div>
     )

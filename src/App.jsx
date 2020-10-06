@@ -1,20 +1,17 @@
 import React, {useState , useCallback} from 'react';
 import ThemeContext , { DARK_THEME , LIGHT_THEME , DarkMode } from './theme';
-import HeaderContainer from './Components/HeaderContainer';
-import MainContainer from './Components/MainContainer';
-import Attribution from './Components/Attribution';
-import data from '../data/data.json';
+import Layout from './Components/Layout'
 import './style.css';
 
 
 const App = () => {
-    const datasrc = data
+    
     const [ dark , setDark ] = useState(DarkMode.getTheme)
     const theme = dark ? DARK_THEME : LIGHT_THEME
 
     const toggleDarkMode = useCallback(() => {
-        setDark( () => {
-            const newState = !dark;
+        setDark( prevState => {
+            const newState = !prevState;
             DarkMode.setTheme(newState);
             return newState;
         });
@@ -22,10 +19,7 @@ const App = () => {
 
     return(
         <ThemeContext.Provider value={theme}>       
-            <div className="background-pattern"></div>
-            <HeaderContainer data= {datasrc} state= {dark} toggler={toggleDarkMode}/>
-            <MainContainer data= {datasrc}/>            
-            <Attribution/>
+            <Layout state={dark} toggler={toggleDarkMode}/>            
         </ThemeContext.Provider>
     )
 }

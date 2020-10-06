@@ -1,9 +1,10 @@
+import React, {useContext}  from 'react';
 import { Math } from 'core-js';
-import React from 'react';
 import Switcher from './Switcher';
+import themeContext from '../theme';
 
 const HeaderContainer = props => {
-
+    const theme = useContext(themeContext)
     const totalNumber = props.data.general.reduce( (acc,item) => { 
         return acc + item.numbers;
     },0)
@@ -12,7 +13,7 @@ const HeaderContainer = props => {
         <section className='header-container'>
             <header>
                 <div className="titles">
-                    <h1>Social Media Dashboard</h1>
+                    <h1 style={theme.textPrimary}>Social Media Dashboard</h1>
                     <h3>Total Followers:{
                         totalNumber.toString()
                         .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -38,7 +39,7 @@ const HeaderContainer = props => {
 }
 
 const HeaderCard = (props) => {
-
+    const theme = useContext(themeContext)
     const socialNetworkIcon = `../../images/icon-${props.socialNetwork}.svg`
     const arrowURL = props.today >= 0? '../../images/icon-up.svg' : '../../images/icon-down.svg'
     const shorten = number => {
@@ -47,14 +48,14 @@ const HeaderCard = (props) => {
     }
 
     return(
-        <div className="header-card">
+        <div className={['header-card',`${theme.name}-card`].join(' ')}>
             <div className={['top-bar', props.socialNetwork].join(' ')}></div>
             <div className="sm-name">
                 <img className="sm-logo" src= {socialNetworkIcon} alt={`${props.socialNetwork} icon`}/>
                 <div className='sm-nick'>{props.name}</div> 
             </div>
             <div className="sm-info">
-                <h1 className= 'sm-number'>{shorten(props.numbers)}</h1>
+                <h1 className= 'sm-number' style={theme.textPrimary}>{shorten(props.numbers)}</h1>
                 <div className='sm-users' >{props.socialNetwork === 'youtube' ? 'SUBSCRIBERS' : 'FOLLOWERS'}</div>
             </div>
             <div className={['today', props.today >= 0? 'positive' : 'negative'].join(' ')}>

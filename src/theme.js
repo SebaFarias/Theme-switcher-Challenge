@@ -2,6 +2,7 @@ import React from 'react'
 
 const DARK_MODE_KEY = 'dark_mode';
 const DARK_THEME = { 
+    name: 'dark',
     textPrimary: {
         color: '#FFFFFF',
     }, 
@@ -16,12 +17,13 @@ const DARK_THEME = {
         background: '#252A41',
     },
     switchBG:{
-        background:'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%);',
+        background:'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%)',
     },
     cardHover:'#333A56',
-    switchBGHover: 'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%);',
+    switchBGHover: 'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%)',
 };
-const LIGHT_THEME = { 
+const LIGHT_THEME = {  
+    name: 'light',
     textPrimary: {
         color: '#1E202A',
     }, 
