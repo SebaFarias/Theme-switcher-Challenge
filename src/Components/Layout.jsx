@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import data from '../../data/data.json'
 import HeaderContainer from './HeaderContainer';
 import MainContainer from './MainContainer';
-import Attribution from './Attribution.jsx';
 import themeContext from '../theme';
 
 const Layout = props => {
@@ -16,7 +15,6 @@ const Layout = props => {
             <div style={theme.patternBG} className="background-pattern"></div>
             <HeaderContainer data= {datasrc} state= {props.state} toggler={props.toggler}/>
             <MainContainer data= {datasrc}/>            
-            <Attribution/>
         </div>
     )
 }
