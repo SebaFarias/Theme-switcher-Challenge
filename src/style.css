@@ -124,6 +124,7 @@ label{
 *
 ********************************/
 .header-card{
+    margin: auto;
     margin-bottom: 24px;
     border-radius: 5px;
     padding-bottom: 24px;
@@ -176,6 +177,7 @@ h2{
     letter-spacing: 0.005em;
 }
 .main-cards{
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(235px,1fr));
     column-gap: 30px;
