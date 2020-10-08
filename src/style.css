@@ -124,7 +124,6 @@ label{
 *
 ********************************/
 .header-card{
-    margin: auto;
     margin-bottom: 24px;
     border-radius: 5px;
     padding-bottom: 24px;
@@ -176,17 +175,16 @@ h2{
     line-height: 29px;/* identical to box height */
     letter-spacing: 0.005em;
 }
-.main-cards{
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(235px,1fr));
-    column-gap: 30px;
-}
 /********************************
 *
 *       6- Main Cards
 *
 ********************************/
+.main-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(235px,1fr));
+    column-gap: 30px;
+}
 .highlight-card{
     height: 125px;
     margin-bottom: 1rem;
