@@ -13,6 +13,7 @@ const MainComponents = props => {
                 return(                    
                     <HighlightCard
                     key= {`${item.socialNetwork}-${index}`}
+                    id= {`${item.socialNetwork}-${index}`}
                     title= {item.title}
                     number= {item.number}
                     socialNetwork= {item.socialNetwork}
@@ -34,9 +35,17 @@ const HighlightCard = props => {
         if(number > 999999) return `${Math.floor(number / 1000000)}m`
         return number > 9999 ? `${Math.floor(number / 1000)}k`: number.toString()
     }
+    const onHover = () => {
+        const card = document.getElementById(props.id)
+        card.style.background = theme.cardHover.background
+    }
+    const mouseOut = () => {
+        const card = document.getElementById(props.id)
+        card.style.background = theme.cardBG.background
+    }
 
     return(
-        <div className={['highlight-card',`${theme.name}-card`].join(' ')}>
+        <div className="highlight-card" id={props.id} style={theme.cardBG} onMouseOver={onHover} onMouseOut={mouseOut}>
             <div className="left-up">{props.title}</div>
             <img src= {props.logo} alt={`${props.socialNetwork} icon`}/>
             <div className="left-down" style={theme.textPrimary}>{shorten(props.number)}</div>

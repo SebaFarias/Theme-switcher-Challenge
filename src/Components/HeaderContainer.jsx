@@ -25,7 +25,8 @@ const HeaderContainer = props => {
                 {props.data.general.map( (item,index) =>{
                     return(
                         <HeaderCard
-                            key= {`${item.socialNetwork}-${index}`}
+                            key= {`${index}-${item.socialNetwork}`}
+                            id= {`${index}-${item.socialNetwork}`}
                             socialNetwork= {item.socialNetwork}
                             name= {item.name}
                             numbers= {item.numbers}
@@ -48,9 +49,17 @@ const HeaderCard = (props) => {
         if(number > 999999) return `${Math.floor(number / 1000000)}m`
         return number > 9999 ? `${Math.floor(number / 1000)}k`: number.toString()
     }
+    const onHover = () => {
+        const card = document.getElementById(props.id)
+        card.style.background = theme.cardHover.background
+    }
+    const mouseOut = () => {
+        const card = document.getElementById(props.id)
+        card.style.background = theme.cardBG.background
+    }
 
     return(
-        <div className={['header-card',`${theme.name}-card`].join(' ')}>
+        <div className='header-card' id={props.id} style={theme.cardBG} onMouseOver={onHover} onMouseOut={mouseOut}>
             <div className={['top-bar', props.socialNetwork].join(' ')}></div>
             <div className="sm-name">
                 <img className="sm-logo" src= {socialNetworkIcon} alt={`${props.socialNetwork} icon`}/>

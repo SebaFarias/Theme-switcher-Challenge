@@ -19,8 +19,28 @@ const DARK_THEME = {
     switchBG:{
         background:'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%)',
     },
-    cardHover:'#333A56',
-    switchBGHover: 'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%)',
+    thumb:{
+        content:'',
+        position: 'absolute',
+        width: '20px',
+        height: '20px',
+        top: '2px',
+        left: '0px',  
+        borderRadius: '50%',
+        transition: 'all 200ms ease-in-out',
+        transform: 'translateX(2px)',
+        background: '#1E202A',
+    }
+    ,
+    cardHover:{
+        background: '#333A56',
+    },
+    switcherLabel: {
+        color: 'white',
+    },
+    switchBGHover: {
+        background:'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%)',
+    }
 };
 const LIGHT_THEME = {  
     name: 'light',
@@ -40,8 +60,27 @@ const LIGHT_THEME = {
     switchBG:{
         background:'#AEB3CB',
     },
-    cardHover:'#E1E3F0',
-    switchBGHover: 'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%);',
+    thumb:{
+        content:'',
+        position: 'absolute',
+        width: '20px',
+        height: '20px',
+        top: '2px',
+        left: '0px',  
+        borderRadius: '50%',
+        transition: 'all 200ms ease-in-out',
+        transform: 'translateX(26px)',
+        background: '#F5F7FF',
+    },
+    cardHover:{
+        background: '#E1E3F0',
+    },
+    switcherLabel:{
+        color: '#63687E',
+    },
+    switchBGHover: {
+        background:'linear-gradient(90deg, #378FE6 0%, #3EDA82 100%)',
+    }
 };
 
 const DarkMode = {

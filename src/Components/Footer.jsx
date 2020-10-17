@@ -9,8 +9,8 @@ const Footer = () => {
     }
     return(
         <div className="attribution" style={style} >
-            Challenge by <a href="https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H">FrontEnd Mentor</a>.
-            Coded by <a href="https://github.com/sebafarias">Seba Farías</a>.
+            Challenge by <a href="https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H" target="_blank">FrontEnd Mentor</a>.
+            Coded by <a href="https://github.com/sebafarias" target="_blank">Seba Farías</a>.
         </div>
     )
 }

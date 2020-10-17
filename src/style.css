@@ -6,9 +6,8 @@
 *       4- Header Cards
 *       5- Main
 *       6- Main Cards
-*       7- Hover Effects
-*       8- Atribution Footer
-*       9- Media Query
+*       7- Atribution Footer
+*       8- Media Query
 *********************************/
 /********************************
 *
@@ -76,7 +75,7 @@ header{
 }
 h1{
     font-size: 24px;
-    line-height: 29px;    /* identical to box height */
+    line-height: 29px;
     letter-spacing: 0.001em;
     margin-bottom: 4px;
 }
@@ -102,16 +101,6 @@ label{
     border-radius: 12px;
     border: none;
     cursor: pointer;
-}
-#switch::after{
-    content:' ';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 2px;
-    left: 0px;  
-    border-radius: 50%;
-    transition: all 200ms ease-in-out;
 }
 .header-cards{
     display: grid;
@@ -143,11 +132,11 @@ label{
 .sm-nick{
     margin: auto  auto auto 0;
     font-size: 12px;
-    line-height: 15px;    /* identical to box height */
+    line-height: 15px;    
 }
 .sm-number{
     font-size: 56px;
-    line-height: 68px;/* identical to box height */
+    line-height: 68px;
     text-align: center;
     letter-spacing: -0.035em;
     margin-bottom: 0;
@@ -155,7 +144,7 @@ label{
 .sm-users{
     font-weight: normal;
     font-size: 12px;
-    line-height: 15px;/* identical to box height */
+    line-height: 15px;
     text-align: center;
     letter-spacing: 0.425em;
 }
@@ -172,7 +161,7 @@ main{
 }
 h2{
     font-size: 24px;
-    line-height: 29px;/* identical to box height */
+    line-height: 29px;
     letter-spacing: 0.005em;
 }
 /********************************
@@ -196,7 +185,7 @@ h2{
 }
 .today{
     font-size: 12px;
-    line-height: 15px;    /* identical to box height */
+    line-height: 15px;    
     text-align: center;
     letter-spacing: 0.03em;
     margin-top: 25px ;
@@ -225,53 +214,7 @@ h2{
 }
 /********************************
 *
-*       7- Hover Effects
-*
-********************************/
-.light-switch #switch{
-    background: #AEB3CB;
-}
-.light-switch #switch::after{
-    transform: translateX(26px);
-    background: #F5F7FF;
-}
-.light-switch:hover #switch,
-.light-switch:focus #switch,
-.light-switch:active #switch{
-    background: linear-gradient(90deg, #378FE6 0%, #3EDA82 100%);
-}
-.dark-switch #switch{
-    background: linear-gradient(90deg, #378FE6 0%, #3EDA82 100%);
-}
-.dark-switch #switch::after{
-    transform: translateX(2px);
-    background: #1E202A;
-}
-.dark-switch:hover label,
-.dark-switch:focus label,
-.dark-switch:active label{
-    color: white;
-}
-.dark-card{
-    background: #252A41;
-}
-.light-card{
-    background: #F0F2FA;
-}
-.light-card:hover,
-.light-card:focus,
-.light-card:active{
-    background: #E1E3F0;
-}
-.dark-card:hover,
-.dark-card:focus,
-.dark-card:active{
-    background: #333A56;
-}
-
-/********************************
-*
-*       8- Atribution Footer
+*       7- Atribution Footer
 *
 ********************************/
 .attribution { 
