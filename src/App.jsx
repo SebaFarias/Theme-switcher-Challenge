@@ -1,7 +1,7 @@
 import React, {useState , useCallback} from 'react';
 import ThemeContext , { DARK_THEME , LIGHT_THEME , DarkMode } from './theme';
 import Layout from './Components/Layout'
-import './style.css';
+import './styles/style.css';
 
 
 const App = () => {

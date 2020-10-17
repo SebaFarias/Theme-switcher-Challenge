@@ -1,0 +1,36 @@
+.header-card{
+    margin-bottom: 24px;
+    border-radius: 5px;
+    padding-bottom: 24px;
+    cursor: pointer;
+}
+.top-bar{
+    height: 4px;
+    border-radius: 4px 4px 0px 0px;
+}
+.sm-name{
+    margin: 28px auto 18px;
+    display: flex;
+}
+.sm-logo{
+    margin: 0 8px 0 auto;
+}
+.sm-nick{
+    margin: auto  auto auto 0;
+    font-size: 12px;
+    line-height: 15px;    
+}
+.sm-number{
+    font-size: 56px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: -0.035em;
+    margin-bottom: 0;
+}
+.sm-users{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.425em;
+}

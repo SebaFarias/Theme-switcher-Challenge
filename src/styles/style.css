@@ -1,0 +1,50 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 200ms ease-in-out;
+}
+body{
+    font-family: 'Inter' , 'Serif';
+    font-weight: bold;
+    width: 100vw;
+}
+.background-pattern{
+    position: absolute;
+    height: calc(0.845vw + 230px);
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0 0 1rem 1rem;
+}
+.facebook{
+    background: #198FF5;
+}
+.twitter{
+    background: #1CA0F2;
+}
+.instagram{
+    background: linear-gradient(90deg, #FDC468 0%, #DF4996 100%);
+}
+.youtube{
+    background: #C4032A;
+}
+.positive{
+    color: #1DB489;
+}
+.negative{
+    color:  #DC414C;
+}
+main{
+    padding: 22px max( 0px, 13.1455vw - 24.296px); 
+}
+.title{
+    padding-bottom: 27px;
+}
+h2{
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.005em;
+}

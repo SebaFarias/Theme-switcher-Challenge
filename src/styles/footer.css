@@ -1,0 +1,13 @@
+.attribution { 
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a { 
+    text-decoration: none;
+    background: linear-gradient(90deg, #378FE6 0%, #3EDA82 100%); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

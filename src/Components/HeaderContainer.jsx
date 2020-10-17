@@ -2,6 +2,8 @@ import React, {useContext}  from 'react';
 import { Math } from 'core-js';
 import Switcher from './Switcher';
 import themeContext from '../theme';
+import '../styles/header.css'
+import '../styles/header-cards.css'
 
 const HeaderContainer = props => {
     const theme = useContext(themeContext)

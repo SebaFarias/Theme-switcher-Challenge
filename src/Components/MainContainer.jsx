@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import themeContext from '../theme';
+import '../styles/main-cards.css'
 
 const MainComponents = props => {
     const theme = useContext(themeContext)
