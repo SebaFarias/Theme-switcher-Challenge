@@ -16,7 +16,7 @@ const Switcher = ({ on, toggle }) => {
 
     return(
         <div className='switch' onClick={toggle} onMouseOver={onHover} onMouseOut={mouseOut}> 
-            <label htmlFor='switch' style={theme.switcherLabel}>Dark Mode</label>
+            <label htmlFor='switch' onClick={toggle} style={theme.switcherLabel}>Dark Mode</label>
             <button 
               type= 'button'
               name= 'theme switcher'
