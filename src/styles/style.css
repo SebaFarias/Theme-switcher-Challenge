@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: all 200ms ease-in-out;
+    transition: background 800ms ease-in-out;
 }
 body{
     font-family: 'Inter' , 'Serif';
