@@ -32,6 +32,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',
+            favicon: './images/favicon-32x32.png',
         }),
     ],
 }
